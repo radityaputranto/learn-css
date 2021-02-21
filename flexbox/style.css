@@ -1,0 +1,57 @@
+.container{
+    width: 600px;
+    height: 600px;
+    border : 5px solid #333;
+    margin:30px auto;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    /* mengatur arah dan urutan element  */
+    /* flex-direction: row | row-reverse | column | column-reverse; */
+    flex-direction: row;
+
+    /* mengatur element bila element tidkamuat diadalam container */
+    /* default no-wrap / element akan dipaksa masuk container */
+    /* flex-wrap: wrap; */
+
+    /* mengatur rata element diadalm container */
+    justify-content: space-evenly;
+
+    /* mengatur penjajaran item vertikal */
+    /* baseline akah mengatur berdasrakan ukruan font item tersebut */
+    /* align-items: center; */ /* hanay untuk satu baris */
+    /* align-content: center; */ /* untuk lebih dari satu baris */
+
+    align-items: flex-start;
+
+}
+
+.container div{
+    /* width: 120px;
+    height: 120px; */
+    background-color: cornflowerblue;
+    margin: 2px;
+    /* flex grow akana mengisi container dengan penuh */
+    flex: 1;
+}
+
+.satu{
+    order: 3;
+}
+.container div.dua{
+    order: 4;
+    flex: 2; /* ukuran 2 kali dair item yg lain */
+    align-self: flex-end;
+}
+.tiga{
+    order: 2;
+}
+.empat{
+    order: 5;
+}
+.lima{
+    order: 1;
+}
+.enam{
+    order: 6;
+}
