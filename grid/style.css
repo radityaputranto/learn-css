@@ -61,6 +61,7 @@ main{
     width: 60%;
     margin: 50px auto;
     color: grey;
+    border: 5px orange solid;
 
     display: grid;
     /* explicit grid / ditentukan ukurannya */
@@ -72,7 +73,12 @@ main{
     /*gridauto-rows :200px;  untuk mengatur baris sisia implisit */
 
     /* grid-template-columns: repeat(4, 1fr ) repeat(5, 1.5fr); */
-    grid-template-columns: 1fr max-content 1fr;
+    /* grid-template-columns: 1fr max-content 1fr; */
+
+    /* otomatis mengisi container bilaa window di resize */
+    grid-template-columns: repeat(auto-fill, 100px );
+    /* auto-fill akan mengecek container apakah masih muat dengan item baru */
+    /* auto-fit akan meneysuaiakn ukuran grid berdasrakan item yg ada */
     /* grid-auto-flow: column; */
 }
 .item{
