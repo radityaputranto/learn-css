@@ -55,3 +55,29 @@ main{
     align-items: center;
     grid-area: main;
 }
+
+/* container dua */
+.container-dua{
+    width: 60%;
+    margin: 50px auto;
+    color: grey;
+
+    display: grid;
+    /* explicit grid / ditentukan ukurannya */
+    /* grid-template-columns: 100px 25% 200px;
+    grid-template-rows: 100px; */
+    /* implicit ototmatis ditentukan */
+    grid-template-columns: 1fr 2fr 3.5fr;
+    grid-template-rows: 2fr 1fr 5fr;
+    /*gridauto-rows :200px;  untuk mengatur baris sisia implisit */
+    grid-auto-flow: column;
+}
+.item{
+    background-color: rgb(138, 209, 254);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item:nth-child(even){
+    background-color: rgb(255, 142,142);
+}
